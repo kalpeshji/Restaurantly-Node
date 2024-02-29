@@ -34,7 +34,34 @@ const chefs = [
     { img: "/image/c3.jpg", name: 'William Anderson', pos: 'Cook' }
 ]
 app.get('/', function (req, res) {
-    res.render('../view/Pages/main', { specials: specials, menus: menus, reviews: reviews, galleries: gallarys, chefs: chefs })
+    res.render('../view/Pages/Home')
+})
+app.get('/about', function (req, res) {
+    res.render('../view/Pages/About', { specials: specials })
+})
+app.get('/menu', function (req, res) {
+    res.render('../view/Pages/Menu', { menus: menus })
+})
+app.get('/special', function (req, res) {
+    res.render('../view/Pages/Special')
+})
+app.get('/event', function (req, res) {
+    res.render('../view/Pages/Event')
+})
+app.get('/bookatable', function (req, res) {
+    res.render('../view/Pages/Book')
+})
+app.get('/testimonial', function (req, res) {
+    res.render('../view/Pages/Testimonial', { reviews: reviews })
+})
+app.get('/gallary', function (req, res) {
+    res.render('../view/Pages/Gallary', { galleries: gallarys })
+})
+app.get('/chefs', function (req, res) {
+    res.render('../view/Pages/Chefs', { chefs: chefs })
+})
+app.get('/contact', function (req, res) {
+    res.render('../view/Pages/Contact')
 })
 app.listen(8000, () => {
     console.log('App is running on port 8000..');

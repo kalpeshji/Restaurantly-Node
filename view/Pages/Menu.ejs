@@ -1,0 +1,50 @@
+<%- include('../Partials/header.ejs') -%>
+<!-- Menu -->
+
+<div class="menu" id='menu'>
+    <div class="container">
+        <div class="spec-title">
+            <h2 class='text-light'>Menu</h2>
+            <p class='fw-semibold pb-4 primary'>Check Our Tasty Menu</p>
+        </div>
+        <ul class='d-flex flex-wrap justify-content-center text-light'>
+            <li class='list-unstyled ff-playfair p-2 mb-2 primary'>All</li>
+            <li class='list-unstyled ff-playfair p-2 mb-2 hov'>Starters</li>
+            <li class='list-unstyled ff-playfair p-2 mb-2 hov'>Salads</li>
+            <li class='list-unstyled ff-playfair p-2 mb-2 hov'>Specialty</li>
+        </ul>
+        <div class="row">
+            <% if (menus.length> 0) { %>
+                <% menus.forEach(function(menu) { %>
+                    <div class="col-lg-6">
+                        <div class="menu-item d-flex align-items-center overflow-hidden w-100">
+                            <div class="item-img d-flex justify-content-center me-2">
+                                <img class='img-fluid' src=<%=menu.img %> alt="" />
+                            </div>
+                            <div class="item-det w-100">
+                                <div class="me-title d-flex justify-content-between">
+                                    <a href="#"
+                                        class='me-tit text-decoration-none fs-6 pe-2 ff-opensans d-inline-block text-light m-0 position-relative z-2'>
+                                        <%= menu.title %>
+                                    </a>
+                                    <p
+                                        class='me-pr fs-6 primary ff-opensans position-relative z-2 ps-2 float-end m-0 text-end'>
+                                        <%= menu.price %>
+                                    </p>
+                                </div>
+                                <p class='fs-6 ff-opensans text-light m-0 p-0 fst-italic'>
+                                    <%= menu.dsc %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <div class="col-12">
+                                <p class="text-center">No menu items available.</p>
+                            </div>
+                            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('../Partials/footer.ejs') -%>

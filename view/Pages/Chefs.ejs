@@ -1,0 +1,47 @@
+<%- include('../Partials/header.ejs') -%>
+ <!-- Chefs -->
+
+ <div class="chefs" id='chef'>
+    <div class="container">
+        <div class="spec-title">
+            <h2 class='text-light'>CHEFS</h2>
+            <p class='fw-semibold pb-4 primary'>Our Professional Chefs</p>
+        </div>
+        <div class="row">
+            <% if (chefs.length> 0) { %>
+                <% chefs.forEach(function(chef) { %>
+                    <div class='col-lg-4 col-md-6 overflow-hidden position-relative shado'>
+                        <div class="mt20">
+                            <div class="d-flex justify-content-center">
+                                <img class='img-fluid' src="<%= chef.img %>" alt="" />
+                            </div>
+                            <div class="position-absolute w-100 h-100 z-2 d-non">
+                                <div class="c-info text-light d-flex flex-wrap justify-content-center">
+                                    <h4 class='mb-0 ff-playfair'>
+                                        <%= chef.name %>
+                                    </h4>
+                                    <p class='w-100 text-center mt-0 fst-italic ff-opensans'>
+                                        <%= chef.pos %>
+                                    </p>
+                                </div>
+                                <div class="social text-light d-flex justify-content-center ff-opensans">
+                                    <a href='javascript:void(0);' class='text-decoration-none text-light'><i
+                                            class="bi bi-twitter mx-10"></i></a>
+                                    <a href='javascript:void(0);' class='text-decoration-none text-light'><i
+                                            class="bi bi-facebook mx-10"></i></a>
+                                    <a href='javascript:void(0);' class='text-decoration-none text-light'><i
+                                            class="bi bi-instagram mx-10"></i></a>
+                                    <a href='javascript:void(0);' class='text-decoration-none text-light'><i
+                                            class="bi bi-linkedin mx-10"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+                        <% } else { %>
+                            <p>No chefs available.</p>
+                            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('../Partials/footer.ejs') -%>

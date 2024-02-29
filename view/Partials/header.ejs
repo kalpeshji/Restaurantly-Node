@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <div class="topbar d-flex align-items-center bg-transparent" id='home' data-bs-theme="dark">
+  <!-- <div class="topbar d-flex align-items-center" id='home' data-bs-theme="dark">
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
         <div class="d-flex text-light align-items-center z-3">
@@ -36,11 +36,11 @@
         </div>
       </div>
     </div>
-  </div>
-  <nav class="navbar blr navbar-expand-lg z-3 w-100 py-2">
+  </div> -->
+  <nav class="navbar blr position-fixed top-0 navbar-expand-lg z-3 w-100 py-2">
     <div class="container position-relative">
       <div class="d-flex flex-wrap justify-content-between align-items-center">
-        <a class="navbar-brand logo text-light" href="#home">RESTAURANTLY</a>
+        <a class="navbar-brand logo text-light" href="/">RESTAURANTLY</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
           aria-controls="navarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -48,27 +48,27 @@
         <div class="collapse navbar-collapse mx-auto" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active navli" href="#home">Home</a>
+              <a class="nav-link active navli" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#about">About</a>
+              <a class="nav-link active navli" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#menu">Menu</a>
+              <a class="nav-link active navli" href="/menu">Menu</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#special">Specials</a>
+              <a class="nav-link active navli" href="/special">Specials</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#event">Events</a>
+              <a class="nav-link active navli" href="/event">Events</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#chef">Chefs</a>
+              <a class="nav-link active navli" href="/chefs">Chefs</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#gallery">Gallery</a>
+              <a class="nav-link active navli" href="/gallary">Gallary</a>
             </li>
-            <li class="nav-item dropdown">
+            <!-- <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle navli" href="javascript:void(0);" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Dropdown
@@ -78,14 +78,17 @@
                 <li><a class="dropdown-item navli" href="#">Another action</a></li>
                 <li><a class="dropdown-item navli" href="#">Something else here</a></li>
               </ul>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link active navli" href="/testimonial">Testimonial</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active navli" href="#contact">Contact</a>
+              <a class="nav-link active navli" href="/contact">Contact</a>
             </li>
           </ul>
         </div>
         <div class="position-absolute end-0">
-          <a href="#booktable" class='btn text-decoration-none  bdr rounded-5 text-light d-inline-block'>BOOK A
+          <a href="/bookatable" class='btn text-decoration-none  bdr rounded-5 text-light d-inline-block'>BOOK A
             TABLE</a>
         </div>
       </div>

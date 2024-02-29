@@ -1,0 +1,47 @@
+<%- include('../Partials/header.ejs') -%>
+ <!-- Booking -->
+
+ <div div class="booking" id='booktable'>
+    <div class="container">
+        <div class="spec-title">
+            <h2 class='text-light'>RESERVATION</h2>
+            <p class='fw-semibold pb-4 primary'>Book a Table</p>
+        </div>
+        <form class="form">
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" class="px-6 ps-3 w-100 pe-2 bg-transparent rounded-0"
+                        placeholder='Your Name' />
+                </div>
+                <div class="col-md-4">
+                    <input type="email" class="px-6 ps-3 w-100 pe-2 bg-transparent rounded-0"
+                        placeholder='Your Email' />
+                </div>
+                <div class="col-md-4">
+                    <input type="tel" class="px-6 ps-3 w-100 pe-2 bg-transparent rounded-0"
+                        placeholder='Your Phone' />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="px-6 ps-3 w-100 pe-2 bg-transparent mt-4 rounded-0"
+                        placeholder='Date' />
+                </div>
+                <div class="col-md-4">
+                    <input type="text" class="px-6 ps-3 w-100 pe-2 bg-transparent mt-4 rounded-0"
+                        placeholder='Time' />
+                </div>
+                <div class="col-md-4">
+                    <input type="number" class="px-6 ps-3 w-100 pe-2 bg-transparent mt-4 rounded-0"
+                        placeholder='# of people' />
+                </div>
+                <div class="col">
+                    <textarea cols="30" rows="10" class="px-6 ps-3 w-100 pe-2 bg-transparent mt-4 rounded-0"
+                        placeholder='Comment'></textarea>
+                </div>
+            </div>
+            <div class="btn-book d-flex justify-content-center mt-4">
+                <button class='btn text-light rounded-5 px-4 py-2'>Book a Table</button>
+            </div>
+        </form>
+    </div>
+</div>
+<%- include('../Partials/footer.ejs') -%>

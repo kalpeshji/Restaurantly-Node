@@ -1,0 +1,25 @@
+<%- include('../Partials/header.ejs') -%>
+<!-- Gallary -->
+
+<div class="gallary" id='gallery'>
+    <div class="container">
+        <div class="spec-title">
+            <h2 class='text-light'>GALLARY</h2>
+            <p class='fw-semibold pb-4 primary'>Some photos from Our Restaurant</p>
+        </div>
+    </div>
+    <div class='row g-0'>
+        <% if (galleries.length> 0) { %>
+            <% galleries.forEach(function(gallery) { %>
+                <div class='col-lg-3 col-md-6 bdr-g overflow-hidden'>
+                    <div class="d-flex justify-content-center">
+                        <img class='img-fluid' src="<%= gallery.img %>" alt="" />
+                    </div>
+                </div>
+                <% }); %>
+                    <% } else { %>
+                        <p>No photos available.</p>
+                        <% } %>
+    </div>
+</div>
+<%- include('../Partials/footer.ejs') -%>
